@@ -1,27 +1,3 @@
-pipeline{
-  agent {
-     label 'workstation'
-  }
-  stages{
+@library('roboshop') _
 
-    stage('compile'){
-      steps {
-        echo 'compile'
-      }
-    }
-    stage('unit test'){
-      steps {
-        echo 'unit test'
-          }
-        }
-    stage('quality control'){
-      steps {
-        echo 'quality control'
-              }
-            }
-    stage('upload code to centralized place'){
-      steps {
-        echo 'upload'
-                  }
-                }
-             }
+ci()
